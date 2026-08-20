@@ -1,0 +1,23 @@
+{
+	"gameOver_duration"	: "12",
+	"closeBackdurationSum"	: "5",
+	"timeToRestartFromEnding": "15",
+
+	"timeToOpenPerLevelMin"	: "1.5",
+	"timeToOpenPerLevelSubstract"	: "0.01",
+
+
+	"calibration": "Seguí a la abejita con la vista",
+	"calibrationDone": "¡Bien! ¡Ahora que florecezcan todas las flores!",
+	"calibration_done": "¡Buen trabajo!",
+	"summary_texts":
+	[
+		"¡Buen trabajo!",
+		"¡Bien hecho!",
+		"¡Qué lindas flores!",
+		"¡Lo estás haciendo muy bien!"
+	],
+	"hitRadiusPerLevel":			[2,2,2,2,2,2],
+	"timeToOpenPerLevel": 			[ 2.25, 2.5 ,2.5, 3.2, 3.2, 3.5 ],
+	"closeBackdurationPerLevel": 	[ 16,18,18,21,26,25 ]
+}
