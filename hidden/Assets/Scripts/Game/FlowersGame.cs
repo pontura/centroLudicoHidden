@@ -44,22 +44,19 @@ public class FlowersGame : BaseGame
         }
         gameOverMoment = GetComponent<GameOverMoment>();
     }
+    // void Update()
+    // {
+    //     Vector3 mouseScreenPos = Input.mousePosition;
+    //     mouseScreenPos.z = 0;
+    //     Camera cam = Camera.main;
+    //     mouseScreenPos.z = Mathf.Abs(cam.transform.position.z); 
 
-    void Update()
-    {
-        Vector3 mouseScreenPos = Input.mousePosition;
-        mouseScreenPos.z = 0;
-        Camera cam = Camera.main;
-        mouseScreenPos.z = Mathf.Abs(cam.transform.position.z); 
+    //     Vector3 worldPos = cam.ScreenToWorldPoint(mouseScreenPos);
+    //     worldPos.z = 0f;
 
-        Vector3 worldPos = cam.ScreenToWorldPoint(mouseScreenPos);
-        worldPos.z = 0f;
+    //     OnUpdate(worldPos);
 
-        OnUpdate(worldPos);
-
-    }
-
-
+    // }
     FlowerAsset lastaActive;
     float distance = 6;
     public override void OnUpdate(Vector2 eyesPos)
