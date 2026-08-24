@@ -262,7 +262,10 @@ MonoBehaviour:
   gamesManager: {fileID: 0}
   canvasRect: {fileID: 0}
   canvas: {fileID: 0}
-  flowers: []
+  flowers:
+  - {fileID: 7903860872571250142}
+  - {fileID: 3274319845685431636}
+  - {fileID: 1079754657982813467}
   plants:
   - {fileID: 355793081377658303}
   - {fileID: 461268123243491822}
@@ -2761,6 +2764,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3089037769277377770, guid: b8cb1a172ef8450418c87ac36406b27a, type: 3}
   m_PrefabInstance: {fileID: 4401988722659303193}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7903860872571250142 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5811656716119833287, guid: b8cb1a172ef8450418c87ac36406b27a, type: 3}
+  m_PrefabInstance: {fileID: 4401988722659303193}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c35138a947c3cb45951439e849b8e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerAsset
 --- !u!1001 &4990669497714079487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4028,6 +4042,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8cb1a172ef8450418c87ac36406b27a, type: 3}
+--- !u!114 &1079754657982813467 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5811656716119833287, guid: b8cb1a172ef8450418c87ac36406b27a, type: 3}
+  m_PrefabInstance: {fileID: 6799074078347390940}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c35138a947c3cb45951439e849b8e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerAsset
 --- !u!4 &8396221147342791478 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3089037769277377770, guid: b8cb1a172ef8450418c87ac36406b27a, type: 3}
@@ -5952,6 +5977,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8cb1a172ef8450418c87ac36406b27a, type: 3}
+--- !u!114 &3274319845685431636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5811656716119833287, guid: b8cb1a172ef8450418c87ac36406b27a, type: 3}
+  m_PrefabInstance: {fileID: 9067890582294263699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c35138a947c3cb45951439e849b8e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerAsset
 --- !u!4 &6271800197266373497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3089037769277377770, guid: b8cb1a172ef8450418c87ac36406b27a, type: 3}

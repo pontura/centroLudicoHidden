@@ -71,7 +71,6 @@ public class FlowersGame : BaseGame
                 p.SetForce(diff/distance);
             }
         }
-        return;
         int id = 0;
         foreach (FlowerAsset f in flowers)
         {

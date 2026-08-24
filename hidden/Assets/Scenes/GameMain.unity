@@ -798,11 +798,6 @@ MonoBehaviour:
   game: {fileID: 0}
   levels:
   - {fileID: 6289411892951418850, guid: 3cad8cca9d7e7b745843a845d1c3f930, type: 3}
-  - {fileID: 6289411892951418850, guid: 42f6d3f98491d4247af15448530014a6, type: 3}
-  - {fileID: 6289411892951418850, guid: 81efd430cfabc0442b77b0fb9e5ce7ed, type: 3}
-  - {fileID: 6289411892951418850, guid: 324810382adfdfd48aaa676c047a4dfd, type: 3}
-  - {fileID: 6289411892951418850, guid: aa375dff589d0d144ba044b6812e3b4d, type: 3}
-  - {fileID: 6289411892951418850, guid: 7d23bf076f2e5ef428f2847b8bb01525, type: 3}
   splash: {fileID: 639927310}
   summary: {fileID: 639927311}
   calibrationManager: {fileID: 639927313}
