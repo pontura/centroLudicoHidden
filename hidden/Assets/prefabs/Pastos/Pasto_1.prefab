@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 4709271179772469250}
   - component: {fileID: 5240343466896616312}
   m_Layer: 0
-  m_Name: Flor_1
+  m_Name: Pasto_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
