@@ -293,6 +293,10 @@ MonoBehaviour:
   - {fileID: 2772939878233098235}
   - {fileID: 6994141951168781525}
   - {fileID: 5604715233525893076}
+  - {fileID: 2423771987841759759}
+  - {fileID: 4567530019161918795}
+  - {fileID: 7300400643814942705}
+  - {fileID: 7221031195106852199}
   hitRadiusNormalized: 2
   progressBar: {fileID: 6569473923072326556, guid: 220cce5efcb35084c9260a8e87154c5b, type: 3}
   progressBars: []
@@ -2542,7 +2546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: curvature
-      value: 1
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: gotoForce
@@ -2550,11 +2554,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: forceMovement
-      value: -0.5
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: firstRotationValue
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5628009626999937526, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2593,6 +2597,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
+--- !u!114 &7221031195106852199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
+  m_PrefabInstance: {fileID: 3210838949856728607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 452abbc569197074abff4c1d820b68a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlantAsset
 --- !u!4 &7914372849599542813 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4709271179772469250, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
@@ -2744,7 +2759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: curvature
-      value: 1
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: gotoForce
@@ -2752,11 +2767,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: forceMovement
-      value: -0.5
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: firstRotationValue
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5628009626999937526, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2795,6 +2810,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
+--- !u!114 &7300400643814942705 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
+  m_PrefabInstance: {fileID: 3308258047355653257}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 452abbc569197074abff4c1d820b68a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlantAsset
 --- !u!4 &7832879077997718667 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4709271179772469250, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
@@ -5399,7 +5425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: curvature
-      value: 1
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: gotoForce
@@ -5407,11 +5433,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: forceMovement
-      value: -0.5
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: firstRotationValue
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5628009626999937526, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5450,6 +5476,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
+--- !u!114 &2423771987841759759 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
+  m_PrefabInstance: {fileID: 7573796017404957047}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 452abbc569197074abff4c1d820b68a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlantAsset
 --- !u!4 &2900659516777591157 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4709271179772469250, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
@@ -6506,7 +6543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: curvature
-      value: 1
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: gotoForce
@@ -6514,11 +6551,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: forceMovement
-      value: -0.5
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: firstRotationValue
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5628009626999937526, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6562,6 +6599,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4709271179772469250, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
   m_PrefabInstance: {fileID: 8636304038591014451}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4567530019161918795 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5240343466896616312, guid: ddf12d6f2c801494c8d01a97d0358314, type: 3}
+  m_PrefabInstance: {fileID: 8636304038591014451}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 452abbc569197074abff4c1d820b68a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlantAsset
 --- !u!1001 &8706355024253518871
 PrefabInstance:
   m_ObjectHideFlags: 0
