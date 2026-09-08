@@ -13,7 +13,8 @@ public class ProgressBar : MonoBehaviour
     
     private float fillMin = 0.16f;
     private float fillMax = 0.84f;
-    bool isOn;
+    public bool isOn;
+    
     public void Init(Transform target, Canvas canvas)
     {
         anim = GetComponent<Animation>();

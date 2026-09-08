@@ -3,7 +3,7 @@ using YaguarLib.Audio;
 
 public class FlowerAsset : MonoBehaviour
 {
-    [HideInInspector] public ProgressBar progressBar;
+    public ProgressBar progressBar;
     FlowersGame game;
     public Animator anim;
     public states state;
@@ -15,6 +15,7 @@ public class FlowerAsset : MonoBehaviour
     float closeBackdurationSum;
     float timeToOpenPerLevelSubstract;
     float timeToOpenPerLevelMin;
+    public bool isOn;
 
     public enum states
     {
@@ -87,7 +88,7 @@ public class FlowerAsset : MonoBehaviour
         sfx.Play("flowerDone");
         Trigger("done");   
         growFX.Play("nule");   
-        Invoke("OnReOpen", closeBackdurationPerLevel);
+        //Invoke("OnReOpen", closeBackdurationPerLevel);
         closeBackdurationPerLevel += closeBackdurationSum;
     }
     void OnReOpen()

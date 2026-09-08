@@ -12,16 +12,24 @@ public class FlowersGame : BaseGame
     float timeToOpenPerLevelMin;
     float timeToOpenPerLevelSubstract;
     GameOverMoment gameOverMoment;
-    int totalDone;
+    [SerializeField] int totalDone = 0;
+
+    [SerializeField] Animator[] bees;
+    public bool isOn;
 
     public override void OnStart(GamesManager gamesManager)
     { 
+        
         base.OnStart(gamesManager);
         Invoke("Delayed", 2);
     }
     void Delayed()
     {
+        foreach (FlowerAsset f in flowers)
+            f.isOn = false;
+
         if(gamesManager.state != GamesManager.states.game)   return;
+        isOn = true;    
 
         totalTime = gamesManager.settings.timeToOpenPerLevel[gamesManager.levelID];
 
@@ -42,7 +50,23 @@ public class FlowersGame : BaseGame
             f.Init(this, totalTime, timeToOpenPerLevelMin, timeToOpenPerLevelSubstract);
             f.SetProgressBar(pb);
         }
+        foreach (Animator bee in bees)
+        {
+            bee.gameObject.SetActive(false);
+        }
+        NextBee();
         gameOverMoment = GetComponent<GameOverMoment>();
+    }
+    void NextBee()
+    {
+        if(totalDone>=bees.Length) 
+        {
+            Debug.Log("no hay mas bees");
+            return;
+        }
+        bees[totalDone].gameObject.SetActive(true);
+        bees[totalDone].Play("show");
+        flowers[totalDone].isOn = true;
     }
     // void Update()
     // {
@@ -61,6 +85,7 @@ public class FlowersGame : BaseGame
     float distance = 6;
     public override void OnUpdate(Vector2 eyesPos)
     {
+        if(!isOn) return;
         if(gameOverMoment != null)
             gameOverMoment.OnUpdate(eyesPos);
         foreach (PlantAsset p in plants)
@@ -74,7 +99,7 @@ public class FlowersGame : BaseGame
         int id = 0;
         foreach (FlowerAsset f in flowers)
         {
-            if(f.state != FlowerAsset.states.done)
+            if(f.isOn && f.state != FlowerAsset.states.done)
             {
                 Vector2 fPos = f.transform.position;
                 float dist = Vector2.Distance(eyesPos, fPos);
@@ -109,7 +134,9 @@ public class FlowersGame : BaseGame
     }
     public void Done()
     {
+        bees[totalDone].SetTrigger("hide");
         totalDone++;
+        NextBee();
         if(totalDone >= flowers.Count)
         {
              foreach (FlowerAsset f in flowers)
@@ -120,7 +147,8 @@ public class FlowersGame : BaseGame
     }
     public void UnDone()
     {
-        totalDone--;
-        if(totalDone<0) totalDone = 0;
+        // totalDone--;
+        // if(totalDone<0) totalDone = 0;
+        // NextBee();
     }
 }
