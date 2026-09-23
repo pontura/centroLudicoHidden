@@ -1,11 +1,13 @@
 {
+	"levels"	: [1, 2],
 	"gameOver_duration"	: "12",
 	"closeBackdurationSum"	: "5",
-	"timeToRestartFromEnding": "15",
+	"timeToRestartFromEnding": "7",
 
 	"timeToOpenPerLevelMin"	: "1.5",
 	"timeToOpenPerLevelSubstract"	: "0.01",
-
+	"timeForIntroSignal"	: "5",
+	"timeForNextBee"	: "4",
 
 	"calibration": "Seguí a la abejita con la vista",
 	"calibrationDone": "¡Bien! ¡Ahora que florecezcan todas las flores!",

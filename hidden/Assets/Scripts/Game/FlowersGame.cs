@@ -1,8 +1,13 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FlowersGame : BaseGame
 {
+    [SerializeField] List<Animator> counterItems;
+    [SerializeField] Animator counterItem;
+    [SerializeField] Transform counterItemsContainer;
+
     [SerializeField] List<FlowerAsset> flowers;
     [SerializeField] List<PlantAsset> plants;
     public int hitRadiusNormalized;
@@ -28,6 +33,9 @@ public class FlowersGame : BaseGame
         foreach (FlowerAsset f in flowers)
             f.isOn = false;
 
+        counterItems = new List<Animator>();
+        Utils.RemoveAllChildsIn(counterItemsContainer);
+
         if(gamesManager.state != GamesManager.states.game)   return;
         isOn = true;    
 
@@ -49,24 +57,29 @@ public class FlowersGame : BaseGame
             pb.Init(f.transform, canvas);
             f.Init(this, totalTime, timeToOpenPerLevelMin, timeToOpenPerLevelSubstract);
             f.SetProgressBar(pb);
+
+            Animator anim  = Instantiate(counterItem, counterItemsContainer);
+            counterItems.Add(anim);
         }
         foreach (Animator bee in bees)
         {
             bee.gameObject.SetActive(false);
         }
-        NextBee();
+        StartCoroutine(NextBee(gamesManager.settings.timeForNextBee));
         gameOverMoment = GetComponent<GameOverMoment>();
     }
-    void NextBee()
+    IEnumerator NextBee(float delay)
     {
+        yield return new WaitForSeconds(delay);
         if(totalDone>=bees.Length) 
         {
             Debug.Log("no hay mas bees");
-            return;
+            
+        } else{
+            bees[totalDone].gameObject.SetActive(true);
+            bees[totalDone].Play("show");
+            flowers[totalDone].isOn = true;
         }
-        bees[totalDone].gameObject.SetActive(true);
-        bees[totalDone].Play("show");
-        flowers[totalDone].isOn = true;
     }
     // void Update()
     // {
@@ -134,9 +147,12 @@ public class FlowersGame : BaseGame
     }
     public void Done()
     {
+
         bees[totalDone].SetTrigger("hide");
+        counterItems[totalDone].Play("on");
+
         totalDone++;
-        NextBee();
+        StartCoroutine(NextBee(gamesManager.settings.timeForNextBee));
         if(totalDone >= flowers.Count)
         {
              foreach (FlowerAsset f in flowers)

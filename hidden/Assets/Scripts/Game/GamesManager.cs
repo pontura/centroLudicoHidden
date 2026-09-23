@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -11,7 +12,8 @@ public class GamesManager : MonoBehaviour
     public bool useEyes;
     public SettingsData settings;
     [SerializeField] BaseGame game;
-    [SerializeField] FlowersGame[] levels;
+    [SerializeField] FlowersGame[] levels_to_add;
+    public List<FlowersGame> levels;
     [SerializeField] Splash splash;
     [SerializeField] Summary summary;
     public CalibrationManager calibrationManager;
@@ -20,6 +22,7 @@ public class GamesManager : MonoBehaviour
     public RectTransform gazeCursor;
     public states state;
     public int levelID;
+    public int[] allLevels;
     public enum states
     {
         splash,
@@ -66,6 +69,19 @@ public class GamesManager : MonoBehaviour
     }
     void StartDelayed()
     {
+        levels = new List<FlowersGame>();
+        allLevels = settings.levels;
+        int id = 0;
+        int allID = 0;
+        foreach(FlowersGame l in levels_to_add)
+        {
+            id++;
+            if(id == allLevels[allID])
+            {
+                levels.Add(l);
+                allID++;
+            }
+        }
         OnSplash();
     }
     [SerializeField] bool transitioning;
@@ -162,7 +178,7 @@ public class GamesManager : MonoBehaviour
         yield return new WaitForSeconds(1);        
         levelID++;
 
-        if(levelID>levels.Length-1)
+        if(levelID>levels.Count-1)
         {
             levelID = -1;
             InitEndCutscene();
@@ -171,11 +187,20 @@ public class GamesManager : MonoBehaviour
             InitNewGame();
 
         gameCanvasContainer.gameObject.SetActive(false);
-        yield return new WaitForSeconds(1);
-        summary.Close();
-        yield return new WaitForSeconds(1);
-        if(levelID != -1)
-            GameStarted();
+        // yield return new WaitForSeconds(1);
+        // summary.Close();
+        // yield return new WaitForSeconds(1);
+       
+    }
+    public void SummaryDone()
+    {
+        CancelInvoke();
+        Invoke("SummaryDoneInvoke", 1);
+    }
+    void SummaryDoneInvoke()
+    {
+         if(levelID != -1)
+            GameStarted();        
     }
     float lastKeyDownTime;
     float delayToInteract = 3;
@@ -196,9 +221,7 @@ public class GamesManager : MonoBehaviour
                         break;
                     case states.game:
                     case states.endCutscene:
-                        levelID = 0;
-                        transitioning = true;
-                        OnSplash();
+                        RestartAllGame();
                         break;
                 }
             }
@@ -213,6 +236,12 @@ public class GamesManager : MonoBehaviour
         UpdateEyes();
     }
 
+    public void RestartAllGame()
+    {
+        levelID = 0;
+        transitioning = true;
+        OnSplash();
+    }
 
     void UpdateEyes()
     {

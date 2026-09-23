@@ -4,6 +4,7 @@ using UnityEngine;
 [Serializable]
 public class SettingsData
 {
+    public int[] levels;
     public float gameOver_duration;
     public string calibration;
     public string calibrationDone;
@@ -17,6 +18,8 @@ public class SettingsData
     public float timeToOpenPerLevelMin;
     public int[] timeToOpenPerLevel;
     public float timeToRestartFromEnding;
+    public float timeForIntroSignal;
+    public float timeForNextBee;
 
     public string summary_text()
     {
