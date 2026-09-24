@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 
 public class GameOverMoment : MonoBehaviour
 {
     public GameObject end;
+    public GameObject endFollow;
     public Bee abeja1;
     public Bee abeja2;
     public Transform container;
@@ -14,13 +16,15 @@ public class GameOverMoment : MonoBehaviour
     void Start()
     {
         end.SetActive(false);
+        endFollow.SetActive(false);
     }
     public void Init(int hitRadiusNormalized)
     {        
         end.SetActive(true);
+        endFollow.SetActive(true);
+        isOn = true;
         return;
         this.hitRadiusNormalized = (float)hitRadiusNormalized/3;
-        isOn = true;
         all = new List<Bee>();
         Utils.RemoveAllChildsIn(container);
 
@@ -44,6 +48,7 @@ public class GameOverMoment : MonoBehaviour
     public void OnUpdate(Vector2 eyesPos)
     {
         if (!isOn) return;
+        endFollow.transform.position = eyesPos;
         return;
         int id =0;
         foreach (Bee bee in all)
