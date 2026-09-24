@@ -31,6 +31,7 @@ public class ProgressBar : MonoBehaviour
     }
     public void SetOn()
     {
+        CancelInvoke();
         isOn = true;
         anim.Play("on");
         gameObject.SetActive(true);
@@ -49,6 +50,7 @@ public class ProgressBar : MonoBehaviour
     public void Close()
     {        
         anim.Play("off");
+        CancelInvoke();
         Invoke("Reset", 0.25f);
     }   
     void Reset()

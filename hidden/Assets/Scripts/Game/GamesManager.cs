@@ -8,6 +8,7 @@ public class GamesManager : MonoBehaviour
 
     TobiiEyeTracker eyeTracker;
     public GameObject outOfView;
+    public GameObject intro;
     public EndCutscene endCutscene;
     public bool useEyes;
     public SettingsData settings;
@@ -34,6 +35,7 @@ public class GamesManager : MonoBehaviour
 
     void Start()
     {
+        intro.SetActive(false);
         eyeTracker = TobiiEyeTracker.EnsureExists();  
         gameCanvasContainer.gameObject.SetActive(false);
         StartCoroutine(LoadSettings());
@@ -87,6 +89,7 @@ public class GamesManager : MonoBehaviour
     [SerializeField] bool transitioning;
     public void OnSplash()
     {
+        intro.SetActive(false);
         StopAllCoroutines();
         state = states.splash;
         splash.Init(OnInitGame);
@@ -134,6 +137,14 @@ public class GamesManager : MonoBehaviour
         game.OnStart(this);
         state = states.game;
     }
+    IEnumerator Intro()
+    {
+        intro.SetActive(true);
+        yield return new WaitForSeconds(settings.timeForIntroSignal); 
+        intro.GetComponent<Animator>().Play("exit");
+        yield return new WaitForSeconds(2); 
+        intro.SetActive(false);
+    }
     EndCutscene _endCutscene;
     void InitEndCutscene()
     {
@@ -151,6 +162,10 @@ public class GamesManager : MonoBehaviour
     {        
         CancelInvoke();
         splash.Close();
+
+        if(levelID == 0)
+            StartCoroutine(Intro());
+            
         Invoke("GameStarted", 1.5f);
     }
     void GameStarted()

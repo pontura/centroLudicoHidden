@@ -1,8 +1,8 @@
 {
 	"levels"	: [1, 2],
-	"gameOver_duration"	: "12",
+	"gameOver_duration"	: "5",
 	"closeBackdurationSum"	: "5",
-	"timeToRestartFromEnding": "7",
+	"timeToRestartFromEnding": "15",
 
 	"timeToOpenPerLevelMin"	: "1.5",
 	"timeToOpenPerLevelSubstract"	: "0.01",

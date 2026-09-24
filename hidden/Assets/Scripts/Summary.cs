@@ -10,7 +10,7 @@ public class Summary : MonoBehaviour
     float from = 0;
     float to = 0;
     float value;
-    float animDuration = 0.1f;
+    float animDuration = 0.2f;
 
     void Start()
     {

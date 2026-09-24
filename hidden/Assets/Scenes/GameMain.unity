@@ -781,6 +781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GamesManager
   outOfView: {fileID: 920594711}
+  intro: {fileID: 871543347}
   endCutscene: {fileID: 2471301840577079546, guid: 7b708198259d82548b4a01becfd9e8ae, type: 3}
   useEyes: 0
   settings:
@@ -1002,6 +1003,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &871543347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5368046895552964049, guid: 26bb820d76b90fb429c0bc64f6a8b0d6, type: 3}
+  m_PrefabInstance: {fileID: 763594853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &920594711 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 508055164098798127, guid: 43a4a1a15c143f04fa1d09afb4d67996, type: 3}
