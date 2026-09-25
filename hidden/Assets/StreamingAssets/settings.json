@@ -1,6 +1,6 @@
 {
 	"levels"	: [1, 2],
-	"gameOver_duration"	: "225",
+	"gameOver_duration"	: "16",
 	"closeBackdurationSum"	: "5",
 	"timeToRestartFromEnding": "15",
 
