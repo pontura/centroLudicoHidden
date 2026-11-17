@@ -182,7 +182,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.5, y: 26.880001}
+  m_Size: {x: 4.9944153, y: 26.830002}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -338,9 +338,11 @@ MonoBehaviour:
   - {fileID: 1114854557080926501}
   - {fileID: 473535695790347858}
   - {fileID: 8819291318643280930}
-  speed: 1.52
+  gotoForce: 0
   force: 0
+  curvature: 2
   forceMovement: 0.01
+  firstRotationValue: 2
 --- !u!1 &5361493629422659118
 GameObject:
   m_ObjectHideFlags: 0
