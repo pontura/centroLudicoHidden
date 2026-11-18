@@ -1477,34 +1477,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: fireworkBIG
       objectReference: {fileID: 0}
-    - target: {fileID: 9175536899957168792, guid: ba417a38ce7c1d34bb2399dc66c76e86, type: 3}
-      propertyPath: InitialModule.maxNumParticles
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 9175536899957168792, guid: ba417a38ce7c1d34bb2399dc66c76e86, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9175536899957168792, guid: ba417a38ce7c1d34bb2399dc66c76e86, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 9175536899957168792, guid: ba417a38ce7c1d34bb2399dc66c76e86, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9175536899957168792, guid: ba417a38ce7c1d34bb2399dc66c76e86, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 9175536899957168792, guid: ba417a38ce7c1d34bb2399dc66c76e86, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9175536899957168792, guid: ba417a38ce7c1d34bb2399dc66c76e86, type: 3}
-      propertyPath: InitialModule.startSpeed.minScalar
-      value: 22
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
